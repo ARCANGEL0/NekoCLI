@@ -10,7 +10,7 @@
 [![Forks](https://img.shields.io/github/forks/ARCANGEL0/NekoCLI?style=for-the-badge&color=353535)](https://github.com/ARCANGEL0/NekoCLI/fork)
 [![Repo Views](https://komarev.com/ghpvc/?username=NekoCLI&color=353535&style=for-the-badge&label=REPO%20VIEWS)](https://github.com/ARCANGEL0/NekoCLI)
 [![AI](https://img.shields.io/badge/AI-Powered-cyan.svg?style=for-the-badge)](#)
-![Version](https://img.shields.io/badge/version-6.4.1-blue?style=for-the-badge&color=00aacc)
+![Version](https://img.shields.io/badge/version-6.5-blue?style=for-the-badge&color=00aacc)
 
 ![GitHub issues](https://img.shields.io/github/issues/ARCANGEL0/NekoCLI?style=for-the-badge&color=3f3972)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/ARCANGEL0/NekoCLI?style=for-the-badge&color=3f3972)
@@ -114,7 +114,7 @@ $ neko -i "Tell me about Rutherford atom model" # after output, you will have op
 $ neko -x "i need help to enumerate 192.168.0.10 for open ports" # neko will return a small and a list of commands to be run by user, and ask them to retrieve the logs by calling command again, as in example below
 $ cat nmapOutput.txt | neko -x "i have run nmap and found these info, what do you suggest now?" # Continues conversation saved on chat.json, analyzes nmap output and proceeds to suggest next steps
 $ neko -r # resets all chat history.
-$ neko --version # Outputs v6.4.1 🐈
+$ neko --version # Outputs v6.5 🐈
 ```
 </details>
 

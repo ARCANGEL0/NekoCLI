@@ -684,7 +684,12 @@ def main():
         if not user_input:
             print(f"{Fore.RED}[!] Error:\n⯁➤ provide a prompt when using -f <file>{Style.RESET_ALL}")
             sys.exit(1)
-        result = nekoAI(user_input,endpoint="vision",upload=True,filePath=file_path)
+        try:
+            result = nekoAI(user_input, endpoint="vision", upload=True, filePath=file_path)
+        except FileNotFoundError:
+            spinner_stop()
+            print(format_in_box_markdown(f"You sure u got this right? Didn't found any file here in {file_path}", color=Fore.YELLOW) + "\n")
+            sys.exit(1)
         spinner_stop()
         print(format_in_box_markdown(result))
         print("\n")
@@ -712,7 +717,11 @@ def main():
     if image_edit:
         print(format_in_box_markdown("Image will be sent in 5 minutes.\n",color=Fore.YELLOW))
         print(f"    Prompt for image edit:\n {Fore.CYAN}       {edit_prompt}\n")
-        image = editImage(image_dir,edit_prompt)
+        try:
+            image = editImage(image_dir, edit_prompt)
+        except FileNotFoundError:
+            print(format_in_box_markdown(f"You sure u got this right? Didn't found any file here in {image_dir}", color=Fore.YELLOW) + "\n")
+            sys.exit(1)
         if not image:
             print(f"{Fore.RED}Image edit failed. Nothing to open.{Style.RESET_ALL}")
             sys.exit(1)

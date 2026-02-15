@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "nekocli"
-version = "6.4.1"
+version = "6.5"
 description = "Neko CLI - AI-powered command line tool for terminal assistance with GP5, Image & Video generation, Vision, Image edits, shell command execution and pentesting resources."
 readme = "README.md"
 license = {text = "MIT"}

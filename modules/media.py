@@ -174,11 +174,7 @@ def genVideo(prompt: str) -> str:
 
 def editImage(image_path: str, prompt: str) -> str:
     if not os.path.exists(image_path):
-        print(format_in_box_markdown(
-            f"[!] Error: Image file not found: {image_path}!",
-            color=Fore.RED
-        ))
-        return None
+        raise FileNotFoundError(image_path)
 
     try:
         with open(image_path, "rb") as img_file:
@@ -186,7 +182,7 @@ def editImage(image_path: str, prompt: str) -> str:
     except Exception as e:
         print(format_in_box_markdown(
             f"[🞫] Error reading file!",
-            color=Fore.YELLOW
+            color=Fore.RED
         ))
         print(f"{Fore.RED}{e}{Style.RESET_ALL}")
         return None

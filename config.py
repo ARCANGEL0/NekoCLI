@@ -3,7 +3,7 @@ import os
 IS_WINDOWS = os.name == "nt"
 
 # General Configuration
-VERSION = "6.4.1"
+VERSION = "6.5"
 NEKO_BINARY = "https://raw.githubusercontent.com/ARCANGEL0/nekoCLI/main/neko"
 VERSION_URL = "https://raw.githubusercontent.com/ARCANGEL0/nekoCLI/main/version.txt"
 API_OLLAMA_URL = "http://localhost:11434"
