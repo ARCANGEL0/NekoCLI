@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nekocli"
+version = "6.7"
+description = "Neko CLI - AI-powered command line tool for terminal assistance with GP5, Image & Video generation, Vision, Image edits, shell command execution and pentesting resources."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.6"
+dependencies = [
+    "requests",
+    "colorama",
+    "psutil",
+    "requests-toolbelt",
+]
+authors = [
+    {name = "arcxlo", email = "henry.arcangello@gmail.com"},
+]
+
+[project.scripts]
+neko = "modules.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["modules*", "utils*"]
